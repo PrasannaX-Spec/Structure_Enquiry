@@ -1,8 +1,14 @@
 FROM python:3.13
 
-WORKDIR /Sturucture_enquiry
+WORKDIR /Structured_enquiry
 
 COPY . .
 
-# Set Student.py as the default command
-ENTRYPOINT ["python", "Student.py"]
+# Install pytest
+RUN pip install --no-cache-dir pytest
+
+# Run tests (CI step)
+RUN pytest
+
+# Run application
+CMD ["python", "student.py"]
