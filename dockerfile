@@ -1,6 +1,6 @@
 FROM python:3.13
 
-WORKDIR /Structured_enquiry
+WORKDIR /Sturucture_enquiry
 
 COPY . .
 
@@ -11,4 +11,4 @@ RUN pip install --no-cache-dir pytest
 RUN pytest
 
 # Run application
-CMD ["python", "student.py"]
+CMD ["python", "Student.py"]
